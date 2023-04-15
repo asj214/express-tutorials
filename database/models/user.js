@@ -4,7 +4,7 @@ const { Model } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
     static associate(models) {
-      // define association here
+      User.hasMany(models.Post);
     }
   }
   User.init({
@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     modelName: 'User',
     defaultScope: {
       attributes: {
-        exclude: ['password']
+        exclude: ['password', 'deletedAt']
       },
       order: [['id', 'DESC']]
     },

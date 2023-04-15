@@ -29,3 +29,41 @@ Content-Type: application/json
 GET {{ BASE_URL }}/api/auth/me
 Content-Type: application/json
 Authorization: Bearer {{ token }}
+
+
+###
+GET {{ BASE_URL }}/api/posts
+Content-Type: application/json
+Authorization: Bearer {{ token }}
+
+
+###
+POST {{ BASE_URL }}/api/posts
+Content-Type: application/json
+Authorization: Bearer {{ token }}
+
+{
+    "title": "Hello World",
+    "body": "My Father Goes To The Market With Donkey"
+}
+
+###
+GET {{ BASE_URL }}/api/posts/1
+Content-Type: application/json
+Authorization: Bearer {{ token }}
+
+
+###
+PUT {{ BASE_URL }}/api/posts/1
+Content-Type: application/json
+Authorization: Bearer {{ token }}
+
+{
+    "title": "Hello World 2222",
+    "body": "My Father Goes To The Market With Donkey"
+}
+
+###
+DELETE {{ BASE_URL }}/api/posts/2
+Content-Type: application/json
+Authorization: Bearer {{ token }}
